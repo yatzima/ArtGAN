@@ -1,6 +1,6 @@
 # ArtGAN
 
-<img src="http://www.justin.ma/cubism.gif" width="100" height="100"/>
+![Header](header.png)
 
 ## Description
 A small project heavily inspired by this [article](https://towardsdatascience.com/generating-modern-arts-using-generative-adversarial-network-gan-on-spell-39f67f83c7b4) 
