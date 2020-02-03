@@ -1,7 +1,7 @@
-## image_resizer.py
-# Importing required libraries
 import os
+import sys
 import numpy as np
+
 from PIL import Image
 
 # Defining an image size and image channel
@@ -10,10 +10,13 @@ from PIL import Image
 
 IMAGE_SIZE = 128
 IMAGE_CHANNELS = 3
-IMAGE_DIR = 'dataset/'
+IMAGE_DIR = '/Users/justinma/Downloads/wikiart/'
+ART_DIR = sys.argv[1]
+
 
 # Defining image dir path. Change this if you have different directory
-images_path = IMAGE_DIR 
+images_path = IMAGE_DIR + ART_DIR 
+print(images_path)
 
 training_data = []
 
@@ -32,4 +35,4 @@ training_data = np.reshape(training_data,
 training_data = training_data / 127.5 - 1
 
 print('saving file...')
-np.save('cubism_data.npy', training_data)
+np.save(ART_DIR.lower() + '_data.npy', training_data)
